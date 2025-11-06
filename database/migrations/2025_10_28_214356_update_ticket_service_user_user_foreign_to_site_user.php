@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::table('ticket_service_user', function (Blueprint $table) {
+            // Drop old foreign key
+            $table->dropForeign(['user_id']);
+
+            // Add new foreign key referencing site_user
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('site_user')
+                ->onDelete('cascade');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('ticket_service_user', function (Blueprint $table) {
+            // Revert to old users table if needed
+            $table->dropForeign(['user_id']);
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+        });
+    }
+};
