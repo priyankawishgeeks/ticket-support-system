@@ -408,7 +408,7 @@
             // 🟢 Load all replies from DB
             function loadReplies() {
                 $.ajax({
-                    url: `/tickets/${ticketId}/replies`,
+                 url: "{{ url('tickets') }}/" + ticketId + "/replies",
                     method: 'GET',
                     success: function (res) {
                         const replies = res.data || [];
