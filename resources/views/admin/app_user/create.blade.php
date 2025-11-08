@@ -2,11 +2,15 @@
 @section('page_title', 'Add New App User')
 
 @section('content')
-    <div class="container mt-4">
-        <div class="card shadow">
-            <div class="card-header bg-primary text-white">
-                <h5>Add New App User</h5>
-            </div>
+<div class="container py-4">
+
+    <div class="card border-0 shadow-sm rounded-3">
+        <div class="card-header bg-white border-bottom d-flex justify-content-between align-items-center">
+            <h5 class="mb-0 fw-semibold text-dark">Add New App User</h5>
+            <a href="{{ route('admin.app_user.index') }}" class="btn btn-light btn-sm">
+                <i class="fas fa-arrow-left me-1"></i> Back
+            </a>
+        </div>
 
         {{-- ✅ Unified Alerts --}}
         <div class="p-3">
