@@ -23,6 +23,7 @@ use App\Http\Controllers\Client\ClientTicketController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\Admin\TicketController;
 use App\Http\Controllers\Admin\SiteUserController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\SiteUserAuthController;
 use App\Http\Controllers\Superviser\SuperviserController;
 use App\Http\Controllers\User\ClientPlanController;
@@ -297,3 +298,4 @@ Route::prefix('client')->middleware(['site_user_auth'])->group(function () {
     Route::post('/change-password', [UserController::class, 'updatePassword'])->name('user.password.update');
     Route::get('/contact-support', [UserController::class, 'contactSupport'])->name('user.contact_support');
 });
+Route::post('/chat/user-chat', [ChatController::class, 'store']);

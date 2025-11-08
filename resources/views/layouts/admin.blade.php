@@ -146,17 +146,6 @@
         </div>
     </div>
 
-
-    <!-- Other HTML content -->
-
-    <!-- Start of Chat Widget Script -->
-    <script src="https://chat.wishgeekstechserve.com/static/js/chat_widget2.js?widget_id=e1e7a679-e5a2">
-    </script>
-    <!-- End of Chat Widget Script -->
-    {{--
-    <script src="https://chat.wishgeekstechserve.com/static/js/chat_widget2.js?widget_id=e1e7a679-e5a2"></script> --}}
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- ✅ jQuery (latest stable version, compatible with Bootstrap 5) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
